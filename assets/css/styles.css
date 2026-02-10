@@ -1,3 +1,155 @@
+/* ---------- Tokens ---------- */
+:root {
+ --container: 1200px;
+ --page-pad: 1.5rem;
+
+  /* Font families */
+  --font-display: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --font-heading: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --font-body: "Space Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  /* Font weights */
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  /* Type scale (font-size) */
+  --fs-display-lg: 3.75rem; /* 60px */
+  --fs-h1-lg: 3rem;         /* 48px */
+  --fs-h2-lg: 2.5rem;       /* 40px */
+  --fs-h3-lg: 2rem;         /* 32px */
+  --fs-h4-lg: 1.5rem;      /* 24px */
+  --fs-h5-lg: 1.25rem;      /* 20px */
+
+  --fs-body-lg: 1.25rem;    /* 20px */
+  --fs-body: 1rem;          /* 16px */
+  --fs-body-sm: 0.75rem;    /* 12px */
+
+  /* Line-heights (unitless ratios derived from your px leading) */
+  --lh-display-lg: 1.0665;  /* 64/60 */
+  --lh-h1-lg: 1.1667;       /* 56/48 */
+  --lh-h2-lg: 1.2;          /* 48/40 */
+  --lh-h3-lg: 1.25;         /* 40/32 */
+  --lh-h4-lg: 1.2857;       /* 36/28 */
+  --lh-h5-lg: 1.4;          /* 28/20 */
+
+  --lh-body-lg: 1.2;        /* 24/20 */
+  --lh-body: 1.5;           /* 24/16 */
+  --lh-body-sm: 1.3333;     /* 16/12 */
+
+  /* Element Level Tokens */
+  /* Eyebrow (if you use it later)*/
+  --type-eyebrow-fs: var(--fs-body);
+  --type-eyebrow-lh: var(--lh-body-lg);
+  --type-eyebrow-fw: var(--fw-bold);
+  /* Card Title (if you use it later) */
+  --type-card-title-fs: var(--fs-h5-lg);
+  --type-card-title-lh: var(--lh-h5-lg);
+  --type-card-title-fw: var(--fw-semibold);
+
+
+  /* Spacing Tokens */
+  --space-0-5: 0.5rem;  /* 8px */
+  --space-1: 1rem;    /* 16px */
+  --space-1-5: 1.5rem;  /* 24px */
+  --space-2: 2rem;    /* 32px */
+  --space-2-5: 2.5rem;  /* 40px */
+  --space-3: 3rem;    /* 48px */
+  --space-3-5: 3.5rem;  /* 56px */
+  --space-4: 4rem;    /* 64px */
+
+
+  /* Color Tokens */
+  --color-text-primary: #0f172a;
+  --color-text-secondary: #475569;
+  --color-bg-default: #ffffff;
+  --color-bg-subtle: #f8fafc;
+  --color-border-default: #e5e7eb;
+  --color-accent-primary: #0f172a; /* same as text for now */
+
+
+}
+
+/* ---------- Base Font Setup with Tokens ---------- */
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+}
+
+/* Display (if you use it later) */
+.display-lg {
+  font-family: var(--font-display);
+  font-size: var(--fs-display-lg);
+  line-height: var(--lh-display-lg);
+  font-weight: var(--fw-regular);
+  max-width: 60ch /* Optional: Limit line length for better readability */ ;
+  margin: 4rem 0 0 0;
+}
+
+/* Headings */
+h1 {
+  font-family: var(--font-heading);
+  font-size: var(--fs-h1-lg);
+  line-height: var(--lh-h1-lg);
+  font-weight: var(--fw-regular);
+}
+
+h2 {
+  font-family: var(--font-heading);
+  font-size: var(--fs-h2-lg);
+  line-height: var(--lh-h2-lg);
+  font-weight: var(--fw-regular);
+}
+
+h3 {
+  font-family: var(--font-heading);
+  font-size: var(--fs-h3-lg);
+  line-height: var(--lh-h3-lg);
+  font-weight: var(--fw-regular);
+}
+
+h4 {
+  font-family: var(--font-heading);
+  font-size: var(--fs-h4-lg);
+  line-height: var(--lh-h4-lg);
+  font-weight: var(--fw-regular);
+}
+
+h5 {
+  font-family: var(--font-heading);
+  font-size: var(--fs-h5-lg);
+  line-height: var(--lh-h5-lg);
+  font-weight: var(--fw-regular);
+}
+
+/* ---------- Element Setup with Tokens ---------- */
+#hero-title{
+  font-family: var(--font-heading);
+  font-size: var(--fs-h3-lg);
+  line-height: var(--lh-h3-lg);
+  font-weight: var(--fw-regular);
+  text-transform: uppercase;
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--type-eyebrow-fs);
+  line-height: var(--type-eyebrow-lh);
+  font-weight: var(--type-eyebrow-fw);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin: 0 0 1rem 0;
+}
+
+.work-card-title {
+  font-size: var(--type-card-title-fs);
+  line-height: var(--type-card-title-lh);
+  font-weight: var(--type-card-title-fw);
+}
+
+
 /* ---------- Base / Reset ---------- */
 *,
 *::before,
@@ -32,7 +184,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
-  margin: 0 0 1rem;
+  margin: 0 0 var(--space-2);
 }
 
 ul{
@@ -49,7 +201,7 @@ li{
   padding: 0;
 }
 
-.connect-card{
+.connect-cards{
   list-style: none;
   padding: 0;
 }
@@ -61,8 +213,8 @@ li{
 
 main{
   margin: 0 auto;
-  max-width: 1200px;
-  padding: 3rem 1.5rem;
+  max-width: var(--container);
+  padding: var(--page-pad);
 
 }
 
@@ -72,15 +224,68 @@ body > header{
 
 header nav{
   
-  max-width: 1200px;
+  max-width: var(--container);
   margin: 0 auto;
-  padding: 1.5rem;
+  padding: var(--page-pad);
 
   display: flex;  
   align-items: center;
-  gap: 1.5rem;
+  gap: var(--space-3);
 }
 
 section{
-  margin-top: 4rem;
+  margin-top: var(--space-4);
+}
+
+.hero-actions{
+  display: flex;
+  gap: var(--space-1);
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: var(--space-2);
+}
+
+/*-------- Buttons --------*/
+.primary-button,
+.secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-items: center;
+
+  padding: var(--space-1) var(--space-1-5);
+  border-radius: 0;
+  
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: 1;
+  font-weight: var(--fw-medium);
+
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.primary-button {
+  background-color: var(--color-accent-primary);
+  color: var(--color-bg-default);
+  border: 2px solid var(--color-accent-primary);
+}
+
+.primary-button:hover {
+  text-decoration: none;
+  background-color: var(--color-bg-default);
+  color: var(--color-accent-primary);
+  border-color: var(--color-accent-primary);
+}
+
+.secondary-button {
+  background-color: transparent;
+  color: var(--color-text-primary);
+  border: 2px solid var(--color-accent-primary);
+}
+
+.secondary-button:hover {
+  text-decoration: none;
+  background-color: var(--color-bg-subtle);
+  border-color: var(--color-accent-primary);
 }
