@@ -13,8 +13,74 @@ body {
   background: #ffffff;
 }
 
-
 img{
   max-width: 100%;
   display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+ul{
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+li{
+  margin: 0;
+}
+
+.stats{
+  list-style: none;
+  padding: 0;
+}
+
+.connect-card{
+  list-style: none;
+  padding: 0;
+}
+
+.tags{
+  list-style: none;
+  padding: 0;
+}
+
+main{
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 3rem 1.5rem;
+
+}
+
+body > header{
+  border-bottom: 1px solid #e5e7eb;
+}
+
+header nav{
+  
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+
+  display: flex;  
+  align-items: center;
+  gap: 1.5rem;
+}
+
+section{
+  margin-top: 4rem;
 }
