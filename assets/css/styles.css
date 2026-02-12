@@ -58,13 +58,19 @@
   --space-3: 3rem;    /* 48px */
   --space-3-5: 3.5rem;  /* 56px */
   --space-4: 4rem;    /* 64px */
+  --space-4-5: 4.5rem;    /* 72px */
+  --space-5: 5rem;    /* 80px */
+  --space-5: 5.5rem;    /* 88px */
+  --space-6: 6rem;    /* 96px */
+  --space-7: 7rem;    /* 112px */
+  --space-8: 8rem;
 
 
   /* Color Tokens */
-  --color-text-primary: #0f172a;
-  --color-text-secondary: #475569;
+  --color-text-primary: #122f40;
+  --color-text-secondary: #5d7787;
   --color-bg-default: #ffffff;
-  --color-bg-subtle: #f8fafc;
+  --color-bg-subtle: #dfe5e9;
   --color-border-default: #e5e7eb;
   --color-accent-primary: #0f172a; /* same as text for now */
 
@@ -144,11 +150,16 @@ h5 {
 }
 
 .work-card-title {
-  font-size: var(--type-card-title-fs);
+  font-size: var(--fs-h3-lg);
   line-height: var(--type-card-title-lh);
-  font-weight: var(--type-card-title-fw);
+  font-weight: var(--fw-regular);
 }
 
+.work-card-description{
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+}
 
 /* ---------- Base / Reset ---------- */
 *,
@@ -181,10 +192,6 @@ a:hover {
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
-}
-
-p {
-  margin: 0 0 var(--space-2);
 }
 
 ul{
@@ -226,10 +233,12 @@ li{
   color: var(--color-text-secondary);
 }
 
+/*
 .stat:not(:last-child){
   padding: 0 var(--space-2) 0 0;
   border-right: var(--color-border-default) 2px solid;
 }
+*/
 
 
 .connect-cards{
@@ -265,7 +274,7 @@ header nav{
 }
 
 section{
-  margin-top: var(--space-4);
+  padding: var(--space-6) 0;
 }
 
 .hero-actions{
@@ -321,12 +330,12 @@ section{
   border-color: var(--color-accent-primary);
 }
 
-link-button{
+.link-button{
   display: inline-block;
   align-items: center;
   justify-items: center;
 
-  padding: var(--space-1) var(--space-1-5);
+  padding: var(--space-1) 0 var(--space-1) 0;
   border-radius: 0;
   
   font-family: var(--font-body);
@@ -340,7 +349,7 @@ link-button{
 .work-grid{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-4);
+  gap: var(--space-2);
   margin-top: var(--space-4);
 }
 
@@ -349,5 +358,29 @@ link-button{
   grid-template-columns: 1fr;
   gap: var(--space-2);
   padding: var(--space-2);
-  background-color: var(--color-text-secondary);
+  background-color: var(--color-bg-subtle);
+}
+
+.featured-work-card:hover{
+  background-color:#5d7787;
+}
+
+.featured-work-card a{
+  text-decoration: none;
+}
+
+.tags{
+  display: flex;
+  margin-top: var(--space-2-5);
+  gap: var(--space-0-5);
+}
+
+.tag{
+  font-family: var(--font-heading);
+  font-size: var(--fs-body-sm);
+  text-transform:uppercase;
+
+  padding: var(--space-0-5) var(--space-1);
+  background-color: #ffffff68;
+  border-radius: 999px;
 }
